@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lower Case</title>
+</head>
+<body>
+    <h2>Enter the Content Here:- </h2> <br>
+    <textarea style="width: 50%; height: 100px;" id="content"></textarea>
+    <br><br>
+    <button onclick="lowercase()">Lower Case</button>
+    <button onclick="replace()">Replace</button>
+    <button onclick="clear()">Clear</button>
+    <p id="output"></p>
+    <script>
+        function lowercase()
+        {
+            let num;
+            num=document.getElementById("content").value;
+            a=num.toLowerCase();
+            document.write(a);
+            
+        }
+        function replace()
+        {
+            var place;
+            place=document.getElementById("content").value;
+            b=place.replace(/\s/g,"_");
+            document.write(b);
+            
+        }
+        function clear()
+        {
+            a.reset();
+            b.reset();
+        }
+    </script>
+</body>
+</html>
