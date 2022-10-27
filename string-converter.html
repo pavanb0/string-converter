@@ -5,22 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lower Case</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Enter the Content Here:- </h2> <br>
+    <h2>Enter the Content Here</h2> <br>
     <textarea style="width: 50%; height: 100px;" id="content"></textarea>
     <br><br>
     <button onclick="lowercase()">Lower Case</button>
+    <button onclick="uppercase()">Upper Case</button>
     <button onclick="replace()">Replace</button>
     <button onclick="clear()">Clear</button>
+    <div>
     <p id="output"></p>
+    </div>
     <script>
         function lowercase()
         {
             let num;
             num=document.getElementById("content").value;
             a=num.toLowerCase();
-            document.write(a);
+            document.getElementById("output").innerHTML=a;
+            
+        }
+        function uppercase()
+        {
+            let up;
+            up=document.getElementById("content").value;
+            c=up.toUpperCase();
+            document.getElementById("output").innerHTML=c;
             
         }
         function replace()
@@ -28,7 +40,7 @@
             var place;
             place=document.getElementById("content").value;
             b=place.replace(/\s/g,"_");
-            document.write(b);
+            document.getElementById("output").innerHTML=b;
             
         }
         function clear()
